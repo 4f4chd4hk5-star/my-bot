@@ -1,0 +1,1 @@
+worker: python funnel_bot.py
