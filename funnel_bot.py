@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 
-LESSON_TEXT = """🎓 *РАЗБОР. ПОЧЕМУ БЛОГ НЕ ПРОДАЕТ*
+LESSON_TEXT = """*Разбор. Почему блог не продаёт*
 
 В этом уроке я разбираю:
 — почему одинаковые специалисты продают по-разному
