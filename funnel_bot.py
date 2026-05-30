@@ -8,9 +8,12 @@ logging.basicConfig(level=logging.INFO)
 
 TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 
-LESSON_TEXT = """🎓 *Ваш бесплатный урок*
+LESSON_TEXT = """🎓 *РАЗБОР. ПОЧЕМУ БЛОГ НЕ ПРОДАЕТ*
 
-В этом уроке вы узнаете почему на вас смотрят, но не покупают.
+В этом уроке я разбираю:
+— почему одинаковые специалисты продают по-разному
+— почему красивый блог ≠ бренд, которому платят
+— и что именно создаёт ощущение ценности ещё до того, как человек прочитал хоть одно слово о ваших услугах
 
 👇 Смотрите урок по ссылке:"""
 
@@ -29,7 +32,7 @@ async def send_reminder(chat_id: int, text: str, bot):
             chat_id=chat_id,
             text=text,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("🔥 Купить программу", url=BUY_URL)
+                InlineKeyboardButton("Купить программу", url=BUY_URL)
             ]])
         )
     except Exception as e:
@@ -43,8 +46,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         LESSON_TEXT,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("▶️ Смотреть урок", url=VIDEO_URL)],
-            [InlineKeyboardButton("🔥 Купить программу", url=BUY_URL)],
+            [InlineKeyboardButton("Смотреть урок", url=VIDEO_URL)],
+            [InlineKeyboardButton("Купить программу", url=BUY_URL)],
         ])
     )
 
