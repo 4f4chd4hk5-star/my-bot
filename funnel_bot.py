@@ -46,8 +46,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         LESSON_TEXT,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Смотреть урок", url=VIDEO_URL)],
-            [InlineKeyboardButton("Купить программу", url=BUY_URL)],
+            [InlineKeyboardButton("СМОТРЕТЬ УРОК", url=VIDEO_URL)],
+            [InlineKeyboardButton("КУПИТЬ ПРОГРАММУ", url=BUY_URL)],
         ])
     )
 
